@@ -60,7 +60,7 @@ class InteractiveRecord
       attributes <<  k.to_s
       attributes << v
     end
-    sql = "SELECT * FROM #{self.table_name} WHERE #{attributes[0]} = '#{attributes[1]}''"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{attributes[0]} = '#{attributes[1]}'"
     # binding.pry
     DB[:conn].execute(sql)
   end
