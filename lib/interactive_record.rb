@@ -61,7 +61,7 @@ class InteractiveRecord
       attributes << v
     end
     sql = "SELECT * FROM #{self.table_name} WHERE #{attributes[0]} = #{attributes[1]}"
-    binding.pry
+    # binding.pry
     DB[:conn].execute(sql)
   end
 
