@@ -59,7 +59,7 @@ class InteractiveRecord
       attributes <<  k.to_s
       attrubutes << v
     end
-    sql = "SELECT * FROM #{self.table_name} WHERE #{key.to_s} = #{value}"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{attributes[0]} = #{attrubutes[1]}"
     DB[:conn].execute(sql)
   end
 
